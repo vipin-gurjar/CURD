@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+   {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-8 offset-2">
+            <h2 class="alert alert-info text-center">Update Employee Records</h2>
+            <p>Employee Update</p>
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Update" class="btn btn-primary">
+                <a href="{% url 'index' %}"><input type="back" value="Back to Home" class="btn btn-success"></a>
+            </form>
+        </div>
+    </div>
+</div>
+
+    {% endblock %}
